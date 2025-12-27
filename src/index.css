@@ -98,3 +98,8 @@ html {
   background: url('./assets/downthemall/star-sky.png') center center repeat-y;
   background-size: contain;
 }
+
+.second-section {
+  background: url('./assets/downthemall/longbg.png') center center repeat-y;
+  background-size: cover;
+}

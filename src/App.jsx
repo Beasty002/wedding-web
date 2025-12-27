@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Lenis from 'lenis'
 import './App.css'
 import mountainBg from './assets/downthemall/longbg.png'
 import darkBg from './assets/downthemall/darkbg.png'
@@ -53,6 +54,22 @@ import asset64NTA from './assets/downthemall/64NTAFiZlzU2kGaVG82xflIhbqk.png'
 import assetJ8rC7 from './assets/downthemall/j8rC7lVmTCtjwjX0xagtMTxz38.png'
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+
+    return () => lenis.destroy()
+  }, [])
+
   return (
     <div>
       <div className='w-[98dvw] mx-auto max-w-[1200px] pb-[200px]'>
@@ -76,6 +93,49 @@ function App() {
           <img src={ganeshRight} alt="" className="z-20 w-[25%] absolute  bottom-[-1%] left-[-2%]" />
           <img src={om} alt="" className="z-25 w-[25%] absolute bottom-[-1%]  left-1/2 -translate-x-1/2" />
           <img src={widepiece} alt="" className="z-20 w-full h-[15dvh] absolute  bottom-0 " />
+        </section>
+        <section className='second-section w-full h-[330dvh] relative overflow-hidden'>
+          <img src={lordGanesh} alt="" className="w-[10%]  z-20 absolute top-24  left-1/2 -translate-x-1/2" />
+          <img src={baloon} alt="" className="z-7  w-[50%] top-[20px] absolute right-[-20%]" />
+          <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
+          <img src={castleCloud} alt="" className="z-7  w-[40%] top-[590px] absolute right-[-10%]" />
+          <div className='invite-text'>
+            <span>
+              ॐ श्री गणेशाय नम
+            </span>
+            <span>
+              With the heavenly blessings of
+
+              Smt. Lata Devi & Sm. Kamal Kapoor
+            </span>
+
+            <span>
+              Mrs. Reena & Mr. Rajiv Kapoor
+
+              <span>INVITE
+
+              </span>
+              You to join us in the wedding celebrations of
+
+
+            </span>
+            <span>
+              Abhishek
+
+              &
+
+              Kanika
+            </span>
+
+            <span>
+              Daughter of
+
+              Mrs. Shalini & Mr. Aakash Mittal,
+
+              On the following events
+            </span>
+          </div>
+
         </section>
       </div>
     </div>
