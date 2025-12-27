@@ -1,5 +1,98 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes sway-horizontal {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(25px);
+  }
+}
+
+@keyframes balloon-float {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -15px);
+  }
+}
+
+@keyframes tree-sway {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(8px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-gentle-delayed {
+  animation: float-gentle 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-sway {
+  animation: sway-horizontal 5s ease-in-out infinite;
+}
+
+.animate-balloon {
+  animation: balloon-float 5s ease-in-out infinite;
+}
+
+.animate-tree-sway {
+  animation: tree-sway 6s ease-in-out infinite;
+}
+
+.animate-tree-sway-delayed {
+  animation: tree-sway 6s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-scenery-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
 
 .first-section {
   background: url('./assets/downthemall/star-sky.png') center center repeat-y;
