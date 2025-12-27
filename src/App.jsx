@@ -48,10 +48,12 @@ import topBar from './assets/downthemall/top-bar.png'
 import tree1 from './assets/downthemall/tree1.png'
 import tree2 from './assets/downthemall/tree2.png'
 import widepiece from './assets/downthemall/wide.png'
+import weddingcouple from './assets/downthemall/wedding-couple.png'
 import vines from './assets/downthemall/vines.png'
 import vinesflip from './assets/downthemall/vinesflip.png'
 import asset64NTA from './assets/downthemall/64NTAFiZlzU2kGaVG82xflIhbqk.png'
-import assetJ8rC7 from './assets/downthemall/j8rC7lVmTCtjwjX0xagtMTxz38.png'
+import pinholeinside from './assets/downthemall/pinholeinside.png'
+import whiteScroll from './assets/downthemall/white-scroll.png'
 
 function App() {
   useEffect(() => {
@@ -75,6 +77,13 @@ function App() {
       <div className='w-[98dvw] mx-auto max-w-[1200px] pb-[200px]'>
         <section className='first-section w-full h-[330dvh] relative overflow-hidden'>
           <img src={topBar} alt="" className="w-full h-[600px] z-20 absolute top-0 left-0" />
+          <span className='hero-names z-20 absolute top-[30px] left-1/2 -translate-x-1/2 text-center'>
+            Abhishek
+            <br />
+            &
+            <br />
+            Kanika
+          </span>
           <img src={roseRight} alt="" className="z-10 absolute top-[250px] left-[-20%] w-[50%] animate-float-gentle" />
           <img src={roseLeft} alt="" className="z-10 absolute top-[250px] right-[-20%] w-[50%] animate-float-gentle-delayed" />
           <img src={vinesflip} alt="" className="z-9 absolute top-[250px] left-[-5%] w-[50%] animate-float-gentle-delayed" />
@@ -94,12 +103,15 @@ function App() {
           <img src={om} alt="" className="z-25 w-[25%] absolute bottom-[-1%]  left-1/2 -translate-x-1/2" />
           <img src={widepiece} alt="" className="z-20 w-full h-[15dvh] absolute  bottom-0 " />
         </section>
-        <section className='second-section w-full h-[330dvh] relative overflow-hidden'>
+
+
+
+        <section className='second-section w-full h-[355dvh] relative overflow-hidden'>
           <img src={lordGanesh} alt="" className="w-[10%]  z-20 absolute top-24  left-1/2 -translate-x-1/2" />
           <div className='invite-text pt-20'>
-            <img src={baloon} alt="" className="z-7  w-[50%] top-[20px] absolute right-[-20%]" />
-            <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
-            <img src={castleCloud} alt="" className="z-7  w-[40%] top-[590px] absolute right-[-10%]" />
+            <img src={baloon} alt="" className="z-7  w-[50%] top-[20px] absolute right-[-70%]" />
+            <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-60%]" />
+            <img src={castleCloud} alt="" className="z-7  w-[40%] top-[590px] absolute right-[-50%]" />
             <span>
             </span>
             <span>
@@ -136,26 +148,164 @@ function App() {
           </div>
 
 
-          <div className="event-parts absolute top-[1400px] left-1/2 -translate-x-1/2">
-            <div>
-              <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
-                <img src={ballroomCouple} alt="" />
+          <div className="event-parts absolute top-[1400px] left-1/2 -translate-x-1/2 w-[90%] max-w-[1100px]">
+            <div className="events-grid">
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={ballroomCouple} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Cocktail</h2>
+                <p className="event-info">Friday, March 7th 2026<br />The Savoy, Mussoorie<br />6pm Onwards</p>
               </div>
-              <img src={baloon} alt="" className="z-7  w-[50%] top-[-10px] absolute left-[-10%]" />
-              <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
-              <img src={castleCloud} alt="" className="z-7 w-[40%] top-[30%] absolute right-14" />
-              <h2>Cocktail</h2>
-              <p>Friday, March 7th 2026
 
-                The Savoy, Mussoorie
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={marryCouple} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Mehendi</h2>
+                <p className="event-info">Saturday, March 8th 2026<br />Garden Terrace<br />4pm Onwards</p>
+              </div>
 
-                6pm Onwards</p>
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={modernCouple} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Haldi</h2>
+                <p className="event-info">Saturday, March 8th 2026<br />Pool Lawn<br />10am Onwards</p>
+              </div>
+
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={coupleImg} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Sangeet</h2>
+                <p className="event-info">Saturday, March 8th 2026<br />Grand Ballroom<br />7pm Onwards</p>
+              </div>
+
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={brideGroom} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Wedding</h2>
+                <p className="event-info">Sunday, March 9th 2026<br />Temple Gardens<br />10am Onwards</p>
+              </div>
+
+              <div className="event-item">
+                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                  <img src={weddingcouple} alt="" />
+                </div>
+                <img src={baloon} alt="" className="decor-balloon" />
+                <img src={moon} alt="" className="decor-moon" />
+                <img src={castleCloud} alt="" className="decor-castle" />
+                <h2 className="event-title">Reception</h2>
+                <p className="event-info">Sunday, March 9th 2026<br />Royal Palace Hall<br />7pm Onwards</p>
+              </div>
             </div>
           </div>
 
         </section>
-      </div>
-    </div>
+        <section className="third-section w-full h-[350dvh] relative overflow-hidden">
+          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+            <img src={pinholeinside} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
+            <img src={ringPinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
+          </div>
+
+          <div className='bride-groom-section absolute top-[900px] w-full left-1/2 -translate-x-1/2'>
+            <img src={decor} className='w-20 mx-auto mb-4' />
+            <div className='flex flex-col items-center text-center'>
+              <span className='bride-groom-subtitle'>Meet the</span>
+              <h1 className='bride-groom-title'>Bride &<br />Groom</h1>
+              <p className='bride-groom-text'>We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. The affection shown to us by so many people since our roka has been incredibly moving, and has touched us both deeply. We would like to take this opportunity to thank everyone most sincerely for their kindness. We are looking forward to see you at the wedding functions.</p>
+            </div>
+          </div>
+
+
+          <div className='absolute w-full h-auto top-[1900px] left-1/2 -translate-x-1/2'>
+            <div className='absolute top-[-10px] left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] rounded-full overflow-hidden'>
+              <div className='carousel-track flex h-full'>
+                <img src={longShotCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
+                <img src={punjabiCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
+                <img src={almostKissingCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
+                <img src={longShotCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
+              </div>
+            </div>
+            <img src={pendantImg} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%]' />
+          </div>
+
+        </section>
+
+        <section className="fourth-section w-full h-[330dvh] relative overflow-hidden">
+          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+            <img src={darkScroll} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
+            <img src={pinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
+          </div>
+
+          <div className='things-section absolute top-[900px] w-full left-1/2 -translate-x-1/2'>
+            <img src={question} className='w-20 mx-auto mb-4' />
+            <div className='flex flex-col items-center text-center'>
+              <h1 className='things-title'>Things to<br />know</h1>
+              <p className='things-text'>To help you feel at ease and enjoy every moment of the celebrations, we've gathered a few thoughtful details we'd love for you to know before the big day.</p>
+            </div>
+          </div>
+
+          <div className='info-grid absolute top-[1400px] left-1/2 -translate-x-1/2 w-[90%] max-w-[800px]'>
+            <div className='grid grid-cols-2 gap-8'>
+              <div className='info-card'>
+                <img src={instaIcon} alt="Hashtag" className='w-16 mx-auto mb-3' />
+                <h3 className='info-card-title'>Hashtag</h3>
+                <p className='info-card-text'>#AbhishekWedsKanika - Tag your photos!</p>
+              </div>
+
+              <div className='info-card'>
+                <img src={cardskQ} alt="Staff" className='w-16 mx-auto mb-3' />
+                <h3 className='info-card-title'>Staff</h3>
+                <p className='info-card-text'>Our team will assist you throughout.</p>
+              </div>
+
+              <div className='info-card'>
+                <img src={car} alt="Parking" className='w-16 mx-auto mb-3' />
+                <h3 className='info-card-title'>Parking</h3>
+                <p className='info-card-text'>Complimentary valet parking available.</p>
+              </div>
+
+              <div className='info-card'>
+                <img src={sunCloud} alt="Weather" className='w-16 mx-auto mb-3' />
+                <h3 className='info-card-title'>Weather</h3>
+                <p className='info-card-text'>Expect cool evenings, carry a light jacket.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="fifth-section w-full h-[150dvh] relative overflow-hidden">
+          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+            <img src={whiteScroll} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
+            <img src={pinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
+          </div>
+          <h1 className='countdown absolute top-[800px] left-1/2 -translate-x-1/2 text-4xl font-bold text-center'>
+            The countdown begins
+            <br />
+            72D 05H 11M
+          </h1>
+
+
+        </section>
+      </div >
+    </div >
   )
 }
 
