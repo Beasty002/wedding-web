@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Cormorant+Upright:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 html {
@@ -102,4 +103,80 @@ html {
 .second-section {
   background: url('./assets/downthemall/longbg.png') center center repeat-y;
   background-size: cover;
+}
+
+.invite-text {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.invite-text span {
+  display: block;
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  color: #AC9545;
+  line-height: 1.6;
+}
+
+.invite-text span:first-child {
+  font-family: 'Gotu', 'Cormorant', serif;
+  font-size: 15px;
+  color: #AC9545;
+  letter-spacing: 0.05em;
+}
+
+.invite-text span:nth-child(2) {
+  font-size: 18px;
+  color: #AC9545;
+  font-style: italic;
+}
+
+.invite-text span:nth-child(3) {
+  font-family: 'Cormorant Infant', 'Cormorant', serif;
+  font-size: 28px;
+  color: #AC9545;
+}
+
+.invite-text span:nth-child(3) span {
+  display: block;
+  font-family: 'Cormorant Infant', 'Cormorant', serif;
+  font-size: 100px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #AC9545;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.invite-text span:nth-child(4) {
+  font-family: "Cormorant Upright", serif;
+  font-size: 120px;
+  font-weight: thin;
+  color: #AC9545;
+  line-height: 1.2;
+}
+
+.invite-text span:nth-child(4)::before,
+.invite-text span:nth-child(4)::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #AC9545, transparent);
+  margin: 0.75rem auto;
+}
+
+.invite-text span:last-child {
+  font-size: 20px;
+  color: #AC9545;
+  font-style: italic;
 }

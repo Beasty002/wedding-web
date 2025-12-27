@@ -96,12 +96,11 @@ function App() {
         </section>
         <section className='second-section w-full h-[330dvh] relative overflow-hidden'>
           <img src={lordGanesh} alt="" className="w-[10%]  z-20 absolute top-24  left-1/2 -translate-x-1/2" />
-          <img src={baloon} alt="" className="z-7  w-[50%] top-[20px] absolute right-[-20%]" />
-          <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
-          <img src={castleCloud} alt="" className="z-7  w-[40%] top-[590px] absolute right-[-10%]" />
-          <div className='invite-text'>
+          <div className='invite-text pt-20'>
+            <img src={baloon} alt="" className="z-7  w-[50%] top-[20px] absolute right-[-20%]" />
+            <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
+            <img src={castleCloud} alt="" className="z-7  w-[40%] top-[590px] absolute right-[-10%]" />
             <span>
-              ॐ श्री गणेशाय नम
             </span>
             <span>
               With the heavenly blessings of
@@ -121,9 +120,9 @@ function App() {
             </span>
             <span>
               Abhishek
-
+              <br />
               &
-
+              <br />
               Kanika
             </span>
 
@@ -134,6 +133,24 @@ function App() {
 
               On the following events
             </span>
+          </div>
+
+
+          <div className="event-parts absolute top-[1400px] left-1/2 -translate-x-1/2">
+            <div>
+              <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <img src={ballroomCouple} alt="" />
+              </div>
+              <img src={baloon} alt="" className="z-7  w-[50%] top-[-10px] absolute left-[-10%]" />
+              <img src={moon} alt="" className="z-7  w-[45%] top-[210px] absolute left-[-15%]" />
+              <img src={castleCloud} alt="" className="z-7 w-[40%] top-[30%] absolute right-14" />
+              <h2>Cocktail</h2>
+              <p>Friday, March 7th 2026
+
+                The Savoy, Mussoorie
+
+                6pm Onwards</p>
+            </div>
           </div>
 
         </section>
