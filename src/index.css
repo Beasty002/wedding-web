@@ -106,14 +106,11 @@ img {
   animation: float-slow 7s ease-in-out infinite;
 }
 
-.first-section {
-  background: url('./assets/downthemall/star-sky.png') center center repeat-y;
-  background-size: contain;
-}
+
 
 .hero-names {
   font-family: 'Cormorant Upright', serif;
-  font-size: clamp(40px, 10vw, 80px);
+  font-size: clamp(40px, 6vw, 80px);
   font-weight: 300;
   color: #AC9545;
   line-height: 1.2;
@@ -462,120 +459,166 @@ img {
 }
 
 .carousel-container {
-  width: min(300px, 70vw);
-  height: min(300px, 70vw);
+  width: min(300px, 25vw);
+  height: min(300px, 25vw);
 }
 
 .carousel-img {
-  width: min(300px, 70vw);
+  width: min(400px, 70vw);
 }
 
-/* Mobile-first responsive adjustments */
-@media (max-width: 768px) {
 
-  .first-section,
-  .second-section,
-  .third-section,
-  .fourth-section {
-    height: auto;
-    min-height: 180dvh;
-    padding-bottom: 80px;
+
+.first-section {
+  background: url('./assets/downthemall/star-sky.png') center center repeat-y;
+  background-size: contain;
+  height: 2500px;
+}
+
+
+.first-baloon {
+  width: 600px;
+  top: 600px;
+}
+
+.first-castle {
+  width: 700px;
+  top: 910px;
+}
+
+@media (width < 1024px) {
+  .first-section {
+    height: 2200px;
   }
 
-  .fifth-section {
-    min-height: 80dvh;
+  .first-baloon {
+    top: 60dvw;
+    width: 50dvw;
   }
 
-  .pinhole-container {
-    width: min(400px, 80vw);
-    height: min(400px, 80vw);
-    top: 20px !important;
-  }
-
-  .invite-text {
-    top: 80px;
-    gap: 0.75rem;
-  }
-
-  .event-parts {
-    top: 800px !important;
-    width: 95% !important;
-  }
-
-  .bride-groom-section,
-  .things-section {
-    top: 500px !important;
-    padding: 1rem;
-  }
-
-  .info-grid {
-    top: 900px !important;
-  }
-
-  .info-card-title {
-    font-size: 24px;
-  }
-
-  .info-card-text {
-    font-size: 14px;
-  }
-
-  .carousel-container {
-    width: min(200px, 60vw);
-    height: min(200px, 60vw);
-  }
-
-  .carousel-img {
-    width: min(200px, 60vw);
-  }
-
-  /* Hide decorative images on mobile to prevent overlap */
-  .first-section img[class*="animate-"] {
-    display: none;
-  }
-
-  .first-section .hero-names {
-    display: block;
+  .first-castle {
+    top: 84dvw;
+    width: 60dvw;
   }
 }
 
-@media (max-width: 480px) {
+@media (width < 970px) {
+  .first-section {
+    height: 220dvw;
+  }
+}
 
-  .first-section,
-  .second-section,
-  .third-section,
+.top-5-hovers {
+  top: 250px;
+}
+
+@media (width < 920px) {
+  .top-5-hovers {
+    top: 25dvw;
+  }
+}
+
+
+
+
+.second-section {
+  height: 2700px;
+}
+
+
+.second-balloon {
+  right: 0;
+}
+
+.second-castle {
+  right: -10%;
+}
+
+.second-moon {
+  left: -10%;
+  top: 450px;
+}
+
+@media (width < 1050px) {
+  .second-section {
+    height: 3200px;
+  }
+}
+
+@media (width < 710px) {
+  .second-section {
+    height: 4900px;
+  }
+}
+
+
+.third-section {
+  height: 2500px;
+}
+
+.bride-groom-section {
+  top: 820px;
+}
+
+.carousel-parent {
+  top: 1600px;
+}
+
+@media (width < 1024px) {
+  .third-section {
+    height: 1900px;
+  }
+
+}
+
+
+@media (width < 520px) {
+  .third-section {
+    height: 1500px;
+  }
+
+  .bride-groom-section {
+    top: 540px;
+  }
+
+  .carousel-parent {
+    top: 1250px;
+  }
+}
+
+
+.fourth-section {
+  height: 2000px;
+}
+
+.things-section {
+  top: 900px;
+}
+
+.info-grid {
+  top: 1400px;
+}
+
+@media (width < 520px) {
   .fourth-section {
-    min-height: 150dvh;
+    height: 1500px;
   }
 
-  .pinhole-container {
-    width: min(280px, 75vw);
-    height: min(280px, 75vw);
-  }
-
-  .invite-text {
-    top: 60px;
-    gap: 0.5rem;
-  }
-
-  .event-parts {
-    top: 600px !important;
-  }
-
-  .bride-groom-section,
   .things-section {
-    top: 400px !important;
+    top: 550px;
   }
 
   .info-grid {
-    top: 700px !important;
+    top: 980px;
   }
+}
 
-  .grid-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
+.countdown {
+  top: 800px;
+}
 
+@media (width < 520px) {
   .countdown {
-    top: 500px !important;
+    top: 550px;
   }
 }
