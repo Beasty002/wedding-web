@@ -151,7 +151,7 @@ function App() {
           <div className="event-parts absolute top-[1400px] left-1/2 -translate-x-1/2 w-[90%] max-w-[1100px]">
             <div className="events-grid">
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={ballroomCouple} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -162,7 +162,7 @@ function App() {
               </div>
 
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={marryCouple} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -173,7 +173,7 @@ function App() {
               </div>
 
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={modernCouple} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -184,7 +184,7 @@ function App() {
               </div>
 
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={coupleImg} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -195,7 +195,7 @@ function App() {
               </div>
 
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={brideGroom} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -206,7 +206,7 @@ function App() {
               </div>
 
               <div className="event-item">
-                <div className="single-event border-[4.07px] w-[300px] border-[#AC9545] relative p-3 rounded-full">
+                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
                   <img src={weddingcouple} alt="" />
                 </div>
                 <img src={baloon} alt="" className="decor-balloon" />
@@ -220,7 +220,7 @@ function App() {
 
         </section>
         <section className="third-section w-full h-[350dvh] relative overflow-hidden">
-          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+          <div className='pinhole-container absolute top-40 left-1/2 -translate-x-1/2'>
             <img src={pinholeinside} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
             <img src={ringPinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
           </div>
@@ -236,12 +236,12 @@ function App() {
 
 
           <div className='absolute w-full h-auto top-[1900px] left-1/2 -translate-x-1/2'>
-            <div className='absolute top-[-10px] left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] rounded-full overflow-hidden'>
+            <div className='carousel-container absolute top-[-10px] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden'>
               <div className='carousel-track flex h-full'>
-                <img src={longShotCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
-                <img src={punjabiCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
-                <img src={almostKissingCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
-                <img src={longShotCouple} alt="" className='h-full w-[300px] object-cover shrink-0' />
+                <img src={longShotCouple} alt="" className='h-full carousel-img object-cover shrink-0' />
+                <img src={punjabiCouple} alt="" className='h-full carousel-img object-cover shrink-0' />
+                <img src={almostKissingCouple} alt="" className='h-full carousel-img object-cover shrink-0' />
+                <img src={longShotCouple} alt="" className='h-full carousel-img object-cover shrink-0' />
               </div>
             </div>
             <img src={pendantImg} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%]' />
@@ -250,7 +250,7 @@ function App() {
         </section>
 
         <section className="fourth-section w-full h-[330dvh] relative overflow-hidden">
-          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+          <div className='pinhole-container absolute top-40 left-1/2 -translate-x-1/2'>
             <img src={darkScroll} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
             <img src={pinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
           </div>
@@ -292,7 +292,7 @@ function App() {
           </div>
         </section>
         <section className="fifth-section w-full h-[150dvh] relative overflow-hidden">
-          <div className='absolute top-40 w-[600px] h-[600px] left-1/2 -translate-x-1/2'>
+          <div className='pinhole-container absolute top-40 left-1/2 -translate-x-1/2'>
             <img src={whiteScroll} alt="" className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-spin-variable ' />
             <img src={pinhole} alt="" className='absolute top-1/2 left-1/2 w-[80%] -translate-x-1/2 -translate-y-1/2' />
           </div>

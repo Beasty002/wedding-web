@@ -5,6 +5,17 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @keyframes float-gentle {
 
   0%,
@@ -102,7 +113,7 @@ html {
 
 .hero-names {
   font-family: 'Cormorant Upright', serif;
-  font-size: 80px;
+  font-size: clamp(40px, 10vw, 80px);
   font-weight: 300;
   color: #AC9545;
   line-height: 1.2;
@@ -172,7 +183,7 @@ html {
 .invite-text span:nth-of-type(3) span {
   display: block;
   font-family: 'Cormorant Infant', 'Cormorant', serif;
-  font-size: 100px;
+  font-size: clamp(50px, 12vw, 100px);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #AC9545;
@@ -182,7 +193,7 @@ html {
 
 .invite-text span:nth-of-type(4) {
   font-family: "Cormorant Upright", serif;
-  font-size: 120px;
+  font-size: clamp(60px, 15vw, 120px);
   font-weight: thin;
   color: #AC9545;
   line-height: 1.2;
@@ -232,7 +243,7 @@ html {
 
 .event-title {
   font-family: 'Cormorant Infant', serif;
-  font-size: 45px;
+  font-size: clamp(28px, 6vw, 45px);
   font-weight: 400;
   color: #AC9545;
   text-align: center;
@@ -255,6 +266,7 @@ html {
   width: 50%;
   top: -10px;
   left: -10%;
+  display: none;
 }
 
 .decor-moon {
@@ -263,6 +275,7 @@ html {
   width: 45%;
   top: 210px;
   left: -15%;
+  display: none;
 }
 
 .decor-castle {
@@ -271,6 +284,16 @@ html {
   width: 40%;
   top: 30%;
   right: -40px;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  .decor-balloon,
+  .decor-moon,
+  .decor-castle {
+    display: block;
+  }
 }
 
 
@@ -319,7 +342,7 @@ html {
 
 .bride-groom-title {
   font-family: 'Cormorant Upright', serif;
-  font-size: 80px;
+  font-size: clamp(45px, 10vw, 80px);
   font-weight: 600;
   color: #0c4860;
   line-height: 1.1;
@@ -382,7 +405,7 @@ html {
 
 .things-title {
   font-family: 'Cormorant Upright', serif;
-  font-size: 80px;
+  font-size: clamp(45px, 10vw, 80px);
   font-weight: 600;
   color: #f6e1bb;
   line-height: 1.1;
@@ -422,7 +445,137 @@ html {
 
 .countdown {
   font-family: 'Cormorant Upright', serif;
-  font-size: 40px;
+  font-size: clamp(24px, 5vw, 40px);
   font-weight: 600;
+  color: #AC9545;
   line-height: 1.1;
+}
+
+/* Responsive container utilities */
+.pinhole-container {
+  width: min(600px, 85vw);
+  height: min(600px, 85vw);
+}
+
+.single-event {
+  width: min(300px, 70vw);
+}
+
+.carousel-container {
+  width: min(300px, 70vw);
+  height: min(300px, 70vw);
+}
+
+.carousel-img {
+  width: min(300px, 70vw);
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+
+  .first-section,
+  .second-section,
+  .third-section,
+  .fourth-section {
+    height: auto;
+    min-height: 180dvh;
+    padding-bottom: 80px;
+  }
+
+  .fifth-section {
+    min-height: 80dvh;
+  }
+
+  .pinhole-container {
+    width: min(400px, 80vw);
+    height: min(400px, 80vw);
+    top: 20px !important;
+  }
+
+  .invite-text {
+    top: 80px;
+    gap: 0.75rem;
+  }
+
+  .event-parts {
+    top: 800px !important;
+    width: 95% !important;
+  }
+
+  .bride-groom-section,
+  .things-section {
+    top: 500px !important;
+    padding: 1rem;
+  }
+
+  .info-grid {
+    top: 900px !important;
+  }
+
+  .info-card-title {
+    font-size: 24px;
+  }
+
+  .info-card-text {
+    font-size: 14px;
+  }
+
+  .carousel-container {
+    width: min(200px, 60vw);
+    height: min(200px, 60vw);
+  }
+
+  .carousel-img {
+    width: min(200px, 60vw);
+  }
+
+  /* Hide decorative images on mobile to prevent overlap */
+  .first-section img[class*="animate-"] {
+    display: none;
+  }
+
+  .first-section .hero-names {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .first-section,
+  .second-section,
+  .third-section,
+  .fourth-section {
+    min-height: 150dvh;
+  }
+
+  .pinhole-container {
+    width: min(280px, 75vw);
+    height: min(280px, 75vw);
+  }
+
+  .invite-text {
+    top: 60px;
+    gap: 0.5rem;
+  }
+
+  .event-parts {
+    top: 600px !important;
+  }
+
+  .bride-groom-section,
+  .things-section {
+    top: 400px !important;
+  }
+
+  .info-grid {
+    top: 700px !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .countdown {
+    top: 500px !important;
+  }
 }
