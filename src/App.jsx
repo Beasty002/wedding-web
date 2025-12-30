@@ -149,7 +149,7 @@ function App() {
             <span className='with-text'>with</span>
 
             <span className='bride-details'>
-              Miss Swikriti Yogi
+              Miss Swikriti Karki
               <br />
               <small>Daughter of Bikash Nath Yogi & Amrit Hira Tuladhar Yogi</small>
               <br />
