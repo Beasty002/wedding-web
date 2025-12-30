@@ -56,6 +56,30 @@ import pinholeinside from './assets/downthemall/pinholeinside.png'
 import whiteScroll from './assets/downthemall/white-scroll.png'
 
 function App() {
+  const [countdown, setCountdown] = useState('')
+
+  useEffect(() => {
+    const weddingDate = new Date('2026-02-14T00:00:00')
+
+    const updateCountdown = () => {
+      const now = new Date()
+      const diff = weddingDate - now
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        setCountdown(`${days}D ${hours.toString().padStart(2, '0')}H ${minutes.toString().padStart(2, '0')}M`)
+      } else {
+        setCountdown('The big day is here!')
+      }
+    }
+
+    updateCountdown()
+    const interval = setInterval(updateCountdown, 60000) // Update every minute
+
+    return () => clearInterval(interval)
+  }, [])
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -78,11 +102,11 @@ function App() {
         <section className='first-section w-full relative overflow-hidden'>
           <img src={topBar} alt="" className="w-full h-[600px] z-20 absolute top-0 left-0" />
           <span className='hero-names z-20 absolute top-[30px] left-1/2 -translate-x-1/2 text-center'>
-            Abhishek
+            Bishwas
             <br />
             &
             <br />
-            Kanika
+            Swikriti
           </span>
           <img src={roseRight} alt="" className="z-10 absolute top-5-hovers left-[-20%] w-[50%] animate-float-gentle" />
           <img src={roseLeft} alt="" className="z-10 absolute top-5-hovers right-[-20%] w-[50%] animate-float-gentle-delayed" />
@@ -112,108 +136,45 @@ function App() {
           <img src={moon} alt="" className="z-7  w-[25%] top-[210px] absolute second-moon" />
           <img src={castleCloud} alt="" className="z-7  w-[25%] top-[800px] absolute second-castle" />
           <div className='invite-text pt-20 '>
-            <span>
-            </span>
-            <span>
-              With the heavenly blessings of
-
-              Smt. Lata Devi & Sm. Kamal Kapoor
+            <span className='invite-intro'>
+              With immense joy and heartfelt gratitude, we request the pleasure of your company at the wedding reception celebrating the union of
             </span>
 
-            <span>
-              Mrs. Reena & Mr. Rajiv Kapoor
-
-              <span>INVITE
-
-              </span>
-              You to join us in the wedding celebrations of
-
-
-            </span>
-            <span>
-              Abhishek
+            <span className='groom-details'>
+              Mr. Bishwas Rajbhandari
               <br />
-              &
-              <br />
-              Kanika
+              <small>Son of Bibek Rajbhandari & Yamuna Rajbhandari</small>
             </span>
 
-            <span>
-              Daughter of
+            <span className='with-text'>with</span>
 
-              Mrs. Shalini & Mr. Aakash Mittal,
+            <span className='bride-details'>
+              Miss Swikriti Yogi
+              <br />
+              <small>Daughter of Bikash Nath Yogi & Amrit Hira Tuladhar Yogi</small>
+              <br />
+              <small>Grand-daughter of Radha Devi Yogi</small>
+            </span>
 
-              On the following events
+            <span className='journey-text'>
+              as they begin a new journey together filled with love, respect, and togetherness.
             </span>
           </div>
 
 
-          <div className="event-parts absolute top-[1400px] left-1/2 -translate-x-1/2 w-[90%] max-w-[1100px]">
-            <div className="events-grid">
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={ballroomCouple} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Cocktail</h2>
-                <p className="event-info">Friday, March 7th 2026<br />The Savoy, Mussoorie<br />6pm Onwards</p>
+          <div className="event-parts absolute top-[1100px] left-1/2 -translate-x-1/2 w-[90%] max-w-[1100px]">
+            <div className="single-event-card">
+              <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full mx-auto">
+                <img src={weddingcouple} alt="Wedding Reception" />
               </div>
-
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={marryCouple} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Mehendi</h2>
-                <p className="event-info">Saturday, March 8th 2026<br />Garden Terrace<br />4pm Onwards</p>
-              </div>
-
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={modernCouple} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Haldi</h2>
-                <p className="event-info">Saturday, March 8th 2026<br />Pool Lawn<br />10am Onwards</p>
-              </div>
-
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={coupleImg} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Sangeet</h2>
-                <p className="event-info">Saturday, March 8th 2026<br />Grand Ballroom<br />7pm Onwards</p>
-              </div>
-
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={brideGroom} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Wedding</h2>
-                <p className="event-info">Sunday, March 9th 2026<br />Temple Gardens<br />10am Onwards</p>
-              </div>
-
-              <div className="event-item">
-                <div className="single-event border-[4.07px] border-[#AC9545] relative p-3 rounded-full">
-                  <img src={weddingcouple} alt="" />
-                </div>
-                <img src={baloon} alt="" className="decor-balloon" />
-                <img src={moon} alt="" className="decor-moon" />
-                <img src={castleCloud} alt="" className="decor-castle" />
-                <h2 className="event-title">Reception</h2>
-                <p className="event-info">Sunday, March 9th 2026<br />Royal Palace Hall<br />7pm Onwards</p>
+              <img src={baloon} alt="" className="decor-balloon" />
+              <img src={moon} alt="" className="decor-moon" />
+              <img src={castleCloud} alt="" className="decor-castle" />
+              <h2 className="event-title">Wedding Reception</h2>
+              <div className="event-details">
+                <p className="event-date">Saturday, 14th February 2026</p>
+                <p className="event-venue">Indreni Function Center</p>
+                <p className="event-address">588 Princes Highway, Rockdale</p>
               </div>
             </div>
           </div>
@@ -228,9 +189,10 @@ function App() {
           <div className='bride-groom-section absolute w-full left-1/2 -translate-x-1/2'>
             <img src={decor} className='w-20 mx-auto mb-4' />
             <div className='flex flex-col items-center text-center'>
-              <span className='bride-groom-subtitle'>Meet the</span>
+              <span className='bride-groom-subtitle'>A Note from the</span>
               <h1 className='bride-groom-title'>Bride &<br />Groom</h1>
-              <p className='bride-groom-text'>We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. The affection shown to us by so many people since our roka has been incredibly moving, and has touched us both deeply. We would like to take this opportunity to thank everyone most sincerely for their kindness. We are looking forward to see you at the wedding functions.</p>
+              <p className='bride-groom-text'>With hearts full of gratitude and joy, we warmly invite you to share in one of the most meaningful moments of our lives. Your presence will mean the world to us as we celebrate love, family, and new beginnings. Thank you for being part of our story; we look forward to sharing this special day with you.</p>
+              <p className='bride-groom-signature'>With love and happiness,<br />Bishwas & Swikriti</p>
             </div>
           </div>
 
@@ -268,7 +230,7 @@ function App() {
               <div className='info-card'>
                 <img src={instaIcon} alt="Hashtag" className='w-16 mx-auto mb-3' />
                 <h3 className='info-card-title'>Hashtag</h3>
-                <p className='info-card-text'>#AbhishekWedsKanika - Tag your photos!</p>
+                <p className='info-card-text'>#BishwasWedsSwikriti - Tag your photos!</p>
               </div>
 
               <div className='info-card'>
@@ -299,7 +261,7 @@ function App() {
           <h1 className='countdown absolute left-1/2 -translate-x-1/2 text-4xl font-bold text-center'>
             The countdown begins
             <br />
-            72D 05H 11M
+            {countdown}
           </h1>
 
 
